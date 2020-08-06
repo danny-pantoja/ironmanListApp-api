@@ -9,8 +9,8 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "ironSuit": {
-      "MODEL": "'"${MODEL}"'",
+    "ironManSuit": {
+      "model": "'"${MODEL}"'",
       "description": "'"${DESCRIP}"'"
     }
   }'

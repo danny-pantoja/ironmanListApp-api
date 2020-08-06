@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const ironSchema = new mongoose.Schema({
-  suit: {
+  model: {
     type: String,
     required: true,
     unique: true
@@ -12,7 +12,7 @@ const ironSchema = new mongoose.Schema({
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'IronMansuit',
+    ref: 'User',
     required: true
   }
 }, {
