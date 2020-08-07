@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 const ironSchema = new mongoose.Schema({
   model: {
     type: String,
-    required: true,
-    unique: true
+    required: true
+    // unique: true
   },
   description: {
     type: String,
