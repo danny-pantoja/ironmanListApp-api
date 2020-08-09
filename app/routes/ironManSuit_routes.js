@@ -1,7 +1,7 @@
 const express = require('express')
 const passport = require('passport')
 
-const IronMansuit = require('../models/ironManSuit')
+const IronManSuit = require('../models/ironManSuit')
 
 const customErrors = require('../../lib/custom_errors')
 
@@ -17,7 +17,7 @@ const router = express.Router()
 // INDEX
 // GET
 router.get('/ironManSuit', requireToken, (req, res, next) => {
-  IronMansuit.find()
+  IronManSuit.find()
     .then(ironManSuit => {
       return ironManSuit.map(ironManSuit => ironManSuit.toObject())
     })
@@ -27,19 +27,19 @@ router.get('/ironManSuit', requireToken, (req, res, next) => {
 // SHOW
 // GET
 router.get('/ironManSuit/:id', requireToken, (req, res, next) => {
-  IronMansuit.findById(req.params.id)
+  IronManSuit.findById(req.params.id)
     .then(handle404)
-    .then(IronMansuit => res.status(200).json({ IronMansuit: IronMansuit.toObject() }))
+    .then(ironManSuit => res.status(200).json({ IronManSuit: IronManSuit.toObject() }))
     .catch(next)
 })
 // CREATE
 // POST
 router.post('/ironManSuit', requireToken, (req, res, next) => {
-  req.body.ironManSuit.owner = req.user.id
-
-  IronMansuit.create(req.body.ironManSuit)
+  req.body.suit.owner = req.user.id
+  console.log('req.body.suit is:', req.body.suit)
+  IronManSuit.create(req.body.suit)
     .then(ironManSuit => {
-      res.status(201).json({ ironManSuit: ironManSuit.toObject() })
+      res.status(201).json({ suit: ironManSuit.toObject() })
     })
     .catch(next)
 })
@@ -48,7 +48,7 @@ router.post('/ironManSuit', requireToken, (req, res, next) => {
 router.patch('/ironManSuit/:id', requireToken, removeBlanks, (req, res, next) => {
   delete req.body.ironManSuit.owner
 
-  IronMansuit.findById(req.params.id)
+  IronManSuit.findById(req.params.id)
     .then(handle404)
     .then(ironManSuit => {
       requireOwnership(req, ironManSuit)
@@ -60,7 +60,7 @@ router.patch('/ironManSuit/:id', requireToken, removeBlanks, (req, res, next) =>
 // DESTROY
 // DELETE
 router.delete('/ironManSuit/:id', requireToken, (req, res, next) => {
-  IronMansuit.findById(req.params.id)
+  IronManSuit.findById(req.params.id)
     .then(handle404)
     .then(ironManSuit => {
       requireOwnership(req, ironManSuit)
