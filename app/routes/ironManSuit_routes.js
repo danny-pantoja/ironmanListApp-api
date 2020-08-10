@@ -29,17 +29,17 @@ router.get('/ironManSuit', requireToken, (req, res, next) => {
 router.get('/ironManSuit/:id', requireToken, (req, res, next) => {
   IronManSuit.findById(req.params.id)
     .then(handle404)
-    .then(ironManSuit => res.status(200).json({ IronManSuit: IronManSuit.toObject() }))
+    .then(ironManSuit => res.status(200).json({ ironManSuit: ironManSuit.toObject() }))
     .catch(next)
 })
 // CREATE
 // POST
 router.post('/ironManSuit', requireToken, (req, res, next) => {
-  req.body.suit.owner = req.user.id
-  console.log('req.body.suit is:', req.body.suit)
-  IronManSuit.create(req.body.suit)
+  req.body.ironManSuit.owner = req.user.id
+  console.log('req.body.ironManSuit is:', req.body.ironManSuit)
+  IronManSuit.create(req.body.ironManSuit)
     .then(ironManSuit => {
-      res.status(201).json({ suit: ironManSuit.toObject() })
+      res.status(201).json({ ironManSuit: ironManSuit.toObject() })
     })
     .catch(next)
 })
