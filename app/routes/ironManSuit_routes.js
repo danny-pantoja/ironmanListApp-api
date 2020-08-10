@@ -36,7 +36,7 @@ router.get('/ironManSuit/:id', requireToken, (req, res, next) => {
 // POST
 router.post('/ironManSuit', requireToken, (req, res, next) => {
   req.body.ironManSuit.owner = req.user.id
-  console.log('req.body.ironManSuit is:', req.body.ironManSuit)
+  // console.log('req.body.ironManSuit is:', req.body.ironManSuit)
   IronManSuit.create(req.body.ironManSuit)
     .then(ironManSuit => {
       res.status(201).json({ ironManSuit: ironManSuit.toObject() })
