@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Iron Man Suits</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Iron Man Suits</h1>
+      <p id="message"></p>
+
+      <div id="unauthenticated">
+        <form id="sign-up">
+          <input name="credentials[email]" placeholder="email here" type="text">
+          <input name="credentials[password]" placeholder="password here" type="password">
+          <input name="credentials[password_confirmation]" placeholder="confirm password here" type="password">
+          <button type="submit">Sign Up!</button>
+        </form>
+
+        <form id="sign-in">
+          <input name="credentials[email]" placeholder="email here" type="email">
+          <input name="credentials[password]" placeholder="password here" type="password">
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div id="authenticated">
+        <form id="change-password">
+          <input name="passwords[old]" placeholder="old password" type="password">
+          <input name="passwords[new]" placeholder="new password" type="password">
+          <button type="submit">Change Password</button>
+        </form>
+
+        <form id="sign-out">
+          <button type="submit">Sign Out</button>
+        </form>
+
+        <form id="suit-create">
+          <input type="text" name="ironManSuit[model]" placeholder="suit model">
+          <input type="text" name="ironManSuit[description]" placeholder="suit description">
+          <button type="submit">Create a Suit!</button>
+        </form>
+
+        <button id="suit-index">Get All Suits</button>
+        <!-- <form id="suit-show">
+          <input placeholder="Suit ID" type="text" name="suit[id]">
+          <button type="submit">Show Suit</button>
+        </form> -->
+
+        <form id="suit-delete">
+          <input placeholder="Suit ID" type="text" name="ironManSuit[id]">
+          <button type="submit">Delete A suit</button>
+        </form>
+
+        <form id="suit-update">
+          <input placeholder="Suit Model" type="text" name="ironManSuit[title]">
+          <input placeholder="Suit Director" type="text"  name="ironManSuit[director]">
+          <input placeholder="Suit ID" type="text" name="ironManSuit[id]">
+          <button type="submit">Update Suit</button>
+        </form>
+      </div>
+
+      <div id="content"></div>
+    </body>
+</html>
