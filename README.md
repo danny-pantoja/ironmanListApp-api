@@ -1,51 +1,47 @@
-# Ironman List App
+# Iron Man List App: Nerding out on Iron Man Suits
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+Just a place where one can add their favorite suit (or make one up entirely!) and add a description of it. After signing up and signing in, this application allows the user to create an entry describing an Iron Man Suit. Once added if wanted the user can update it or remove the entry.
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Iron Man List API Repo](https://github.com/danny-pantoja/ironmanListApp-api)
+- [Iron Man List App Deployed API](https://stormy-coast-80026.herokuapp.com/)
+- [Iron Man List Deployed Client](https://danny-pantoja.github.io/ironmanListApp-client/)
+- [Iron Man List App Client Repo](https://github.com/danny-pantoja/ironmanListApp-client)
 
 ## Planning Story
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin
-coffee williamsburg af poutine fingerstache austin semiotics paleo man braid
-vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats
-shoreditch try-hard health goth intelligentsia pop-up small batch skateboard
-farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday
-carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle
-tofu.
+Work started with User Stories and logical planning. The wireframes and the ERD were drawn up. Started working on the backend to ensure the request were built and tested with CURL. After good tests, the front end was started to build the simple webpage.
 
 ### User Stories
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+- As a user I want to sign in/up to join the Iron Man nerdom
+- As a user I want to Create a new Iron Man Suit entry
+- As a user I want to Read multiple Iron Man Suit entries
+- As a user I want to Update an Iron Suit that I own
+- As a user I want to Delete an Iron Suit that I own
 
 ### Technologies Used
 
-- jQuery
-- HTML/CSS
-- Bootstrap
+- Node
+- Express
+- AJAX
 - Javascript
 
 ### Unsolved Problems
 
-- Still need to ....
-- Would like to eventually ....
+- Still need to display the Key of the Iron Man Suit created
+- Would like to eventually add pictures, links, add comments, and better styling
 
 ## Images
 
-#### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+#### ERD:
+![ERD](https://i.imgur.com/NT5RmEf.png)
 
 ---
 
-#### ERD:
-![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)
+### Wireframe:
+![wireframe_1](https://i.imgur.com/XaoNnSJ.png)
+![wireframe_2](https://i.imgur.com/3SyyKqa.png)
+![wireframe_3](https://i.imgur.com/lnA4ecY.png)
+![wireframe_4](https://i.imgur.com/he34mao.png)
