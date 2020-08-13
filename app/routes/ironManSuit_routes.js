@@ -24,16 +24,7 @@ router.get('/ironManSuit', requireToken, (req, res, next) => {
     .then(ironManSuit => res.status(200).json({ ironManSuit: ironManSuit }))
     .catch(next)
 })
-// SHOW
-// GET
-router.get('/ironManSuit/:id', requireToken, (req, res, next) => {
-  IronManSuit.findById(req.params.id)
-    .then(handle404)
-    .then(ironManSuit => res.status(200).json({ ironManSuit: ironManSuit.toObject() }))
-    .catch(next)
-})
-// CREATE
-// POST
+
 router.post('/ironManSuit', requireToken, (req, res, next) => {
   req.body.ironManSuit.owner = req.user.id
   // console.log('req.body.ironManSuit is:', req.body.ironManSuit)
