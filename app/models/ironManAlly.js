@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const ironSchema = new mongoose.Schema({
-  model: {
+  ally: {
     type: String,
     required: true
     // unique: true
@@ -19,4 +19,4 @@ const ironSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('IronManSuit', ironSchema)
+module.exports = mongoose.model('IronManAlly', ironSchema)
